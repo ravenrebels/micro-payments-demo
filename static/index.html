@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
-    <title>Hello, world!</title>
+    <title>Ravencoin micro payments demo</title>
   </head>
   <body>
     <main class="container">
@@ -17,8 +17,10 @@
         <img id="qr" src="" />
         <div>On <span id="network"></span></div>
 
-        <p> 
-          <a href="httsp://testnet.ting.finance" target="_blank"> Get free test RVN on testnet</a></p>
+        <p>
+          <a href="httsp://testnet.ting.finance" target="_blank">
+            Get free test RVN on testnet</a
+          >
         </p>
       </article>
     </main>
@@ -29,7 +31,7 @@
         const session = await response.json();
 
         if (session.accessGranted === true) {
-          return (window.location = "/secure");
+          return (window.location = "/restricted");
         }
 
         const networks = {

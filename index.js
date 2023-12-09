@@ -9,7 +9,7 @@ export const app = express();
 setupSession(app);
 app.use(verifyPayment);
 //Only allow access to secure area if access is granted
-app.use("/secure", (request, response, next) => {
+app.use("/restricted", (request, response, next) => {
   if (request.session.accessGranted === true) {
     return next();
   }
