@@ -43,7 +43,7 @@ rvn-test for testnet
 ```
 
 Please note, if you visit the web app, a Ravencoin address is stored in your user session.
-If you then change network, restart the server, your session is still alive but it has the an address for the wrong network. In that case, remove cookies.
+If you then change network, restart the server, your session is still alive but it has an address for the wrong network. In that case, remove cookies.
 
 ## License
 
