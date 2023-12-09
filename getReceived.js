@@ -28,7 +28,7 @@ export async function getReceived(address) {
       received += item.satoshis;
     }
   }
-
+  // Convert received from satoshis to Ravencoin: divide by 100 million since 1 ravencoin = 100 million satoshis
   if (received > 0) {
     return received / 100000000;
   }
