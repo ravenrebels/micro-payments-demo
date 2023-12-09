@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <main class="container">
+      <article>
+        <h1>WELCOME</h1>
+        <p>Thank you for paying, enjoy our content</p>
+        <button id="signOutButton">Sign out</button>
+      </article>
+    </main>
+    <script type="module">
+      document
+        .getElementById("signOutButton")
+        .addEventListener("click", async function (event) {
+          await fetch("/api/signout");
+          window.location = "/";
+        });
+    </script>
+    <style>
+      body {
+        min-height: 100vh;
+      }
+      body {
+        background: hotpink;
+      }
+    </style>
+  </body>
+</html>
