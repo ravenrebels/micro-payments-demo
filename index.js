@@ -21,6 +21,7 @@ app.get("/api/session", (request, response) => {
   return response.send({
     address: request.session.address,
     accessGranted: request.session.accessGranted,
+    accessPrice: config.accessPrice,
     network: config.network,
   });
 });

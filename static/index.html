@@ -12,16 +12,16 @@
   <body>
     <main class="container">
       <article>
-        <h1>Sign in by paying 10 RVN to</h1>
+        <h1>Sign in by paying <span id="accessPrice"></span> RVN to</h1>
         <code> <div id="address"></div></code><br />
         <img id="qr" src="" />
         <div>On <span id="network"></span></div>
 
-        <p>
+        <article>
           <a href="httsp://testnet.ting.finance" target="_blank">
-            Get free test RVN on testnet</a
+            Need free RVN on testnet</a
           >
-        </p>
+        </article>
       </article>
     </main>
     <script type="module">
@@ -40,7 +40,7 @@
         };
         document.getElementById("network").innerText =
           networks[session.network];
-
+        document.getElementById("accessPrice").innerText = session.accessPrice;
         document.getElementById("address").innerText = session.address;
         document
           .getElementById("qr")
