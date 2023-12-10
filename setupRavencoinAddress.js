@@ -4,7 +4,7 @@ import config from "./config.js";
 
 export function setupRavencoinAddress(request) {
   //This gives us a random address with properties like mnemonic/WIF
-  const generatedAddress = RavencoinKey.generateAddress(config.network);
+  const generatedAddress = RavencoinKey.generateAddressObject(config.network);
   // Storing the address and mnemonic in the session for later use
   request.session.address = generatedAddress.address;
   request.session.mnemonic = generatedAddress.mnemonic;
